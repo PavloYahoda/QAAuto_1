@@ -6,12 +6,12 @@ import org.junit.jupiter.api.condition.OS;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
-public class LifecycleMethods {
+public class LifecycleMethodsTest {
 
         @BeforeAll
         void setupBeforeAll(){
-            System.out.println("--Before all--");
-        }
+            System.out.println("--Before all--");}
+
 
         @BeforeEach
         void setupBeforeEach(){
@@ -19,14 +19,14 @@ public class LifecycleMethods {
         }
 
 
-        @Test
+        @org.junit.jupiter.api.Test
         @Order(1)
         @DisplayName("Order: First test")
         void firstTest(){
             System.out.println("It is first test");
         }
 
-        @Test
+        @org.junit.jupiter.api.Test
         @Order(2)
         @DisplayName("Order: Second test")
         void secondTest(){
@@ -34,19 +34,20 @@ public class LifecycleMethods {
         }
 
         @Disabled("Disabled test")
-        @Test
+        @org.junit.jupiter.api.Test
         void disabledTest(){
             System.out.println("It is disabled test");
         }
 
+
         @EnabledOnOs(value = OS.MAC, disabledReason = "This is specific test only for Mac")
-        @Test
+        @org.junit.jupiter.api.Test
         void onlyForMacTest(){
             System.out.println("It is only for Mac test");
         }
 
         @EnabledOnOs(value = OS.WINDOWS, disabledReason = "This is specific test only for Windows")
-        @Test
+        @org.junit.jupiter.api.Test
         void onlyForWindowsTest(){
             System.out.println("It is only for Windows test");
         }
