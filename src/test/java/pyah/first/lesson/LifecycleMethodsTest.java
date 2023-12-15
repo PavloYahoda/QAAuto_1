@@ -1,3 +1,5 @@
+package pyah.first.lesson;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
@@ -51,7 +53,6 @@ public class LifecycleMethodsTest {
         void onlyForWindowsTest(){
             System.out.println("It is only for Windows test");
         }
-
 
 
         @AfterEach

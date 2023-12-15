@@ -1,3 +1,5 @@
+package pyah.first.lesson;
+
 import org.junit.jupiter.api.*;
 import java.util.Arrays;
 import java.util.List;

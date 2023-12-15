@@ -1,3 +1,5 @@
+package pyah.first.lesson;
+
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.Arrays;

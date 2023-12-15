@@ -1,3 +1,5 @@
+package pyah.first.lesson;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
@@ -59,7 +61,7 @@ public class ParametrizedTest {
     @Order(7)
     @DisplayName("Test Method Source")
     @ParameterizedTest()
-    @MethodSource(value = "TestingData#data")
+    @MethodSource(value = "pyah.first.lesson.TestingData#data") //set fully qualified name # method's name
     void printFromMethod(String name, int age){
         System.out.println("My name is " + name + " and I am " + age + " years old.");
     }
